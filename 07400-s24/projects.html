@@ -19,6 +19,29 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   </head>
   <body class=container style="padding-top: 50px;">
 
+  <style>
+     .container {
+    margin: 20px;
+  }
+  .highlight {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-left: 5px solid #B01C33;
+    margin-bottom: 20px;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .subtitle {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .abstract {
+    text-indent: 20px;
+  }
+</style>
+
 
 
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: darkred;">
@@ -53,5 +76,27 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 
 <p>A brief description of each project and the corresponding poster will be available here.</p>
   <br>
+
+<div class="container">
+  <div class="highlight">
+    <div class="title">Gender Homophily in Open Source Software Networks</div>
+    <p></p>
+    <p><b>Katy Yu</b> (Advisor: Bogdan Vasilescu)</p>
+    <b>Abstract:</b> While gender diversity in open-source software (OSS) has been widely studied, the seemingly opposite concept, gender
+homophily, where individuals tend to collaborate with those of the same gender, is less explored. It is, therefore, unclear
+whether gender homophily is present in OSS. If so, what are the reasons behind it? Does it benefit gender diversity in
+OSS or work against it? This study presents an initial exploration into the existence of gender homophily within OSS
+networks and seeks to unravel the underlying mechanisms of this phenomenon.
+Our study utilizes the World of Code dataset, encompassing the FLOSS ecosystem, which includes binary gender
+data inferred from contributor names. We construct OSS collaboration networks where the ties represent the developer
+collaborations on projects from 2008 to 2022 and extract the network backbone using the computed significance score of
+edge weights. The network's gender composition is extremely skewed (66.38% men, 2.70% women, 30.92% unknown),
+rendering direct estimation of gender homophily unreliable. We ameliorate this problem by estimating the mean shortest
+path distance of dyads of each type of gender composition and using it as a proxy for the social proximity of ties. In
+addition, we use exponential random graph models to estimate the probability of same-gender ties (i.e., the "node-match"
+statistic with respect to gender).
+Our preliminary findings from a comprehensive OSS network dataset reveal nuanced patterns of gender-based collaboration. Moreover, women
+contributors exhibit a strong preference for collaborating with the same gender, a behavior confirmed by ERGM nodematch coefficients, where the probability of women-women ties is 28.3% more likely than men-men ties.
+The observed mean shortest path length of women-women dyads was 0.453 standard deviations shorter than the random baseline, which was in turn longer than that of the men-men dyads (0.36 standard deviations longer than the random baseline). 
   </body>
 </html>
