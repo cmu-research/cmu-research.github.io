@@ -40,8 +40,11 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   .abstract {
     text-indent: 20px;
   }
-</style>
 
+  #studentDropdown {
+    font-size: 18px;
+  }
+</style>
 
 
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: darkred;">
@@ -74,14 +77,86 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     </div>
 
 
-<p>A brief description of each project and the corresponding poster will be available here.</p>
+<p>A brief description of each student's project is available below. The corresponding poster will be available here later in the semester.</p>
   <br>
 
-<div class="container">
+<h2>Select a student:</h2>
+<select id="studentDropdown">
+  <option value="1">Katy Yu</option>
+  <option value="2">Raunak Sood</option>
+  <option value="3">Kyle Booker</option>
+  <option value="4">Jerick Shi</option>
+  <option value="5">Emily Amspoker</option>
+  <option value="6">Anisha Chatterjee</option>
+  <option value="7">Tanisha Saxena</option>
+  <option value="8">Maggie Cai</option>
+  <option value="9">Lijie Yang</option>
+  <option value="10">Elizabeth Knox</option>
+  <option value="11">Trey DuBose</option>
+  <option value="12">William Gay</option>
+  <option value="13">Kunal Kapoor</option>
+  <option value="14">Jaehee Kim</option>
+  <option value="15">Emily Estrada</option>
+  <option value="16">Dongkyun Kim</option>
+  <option value="17">Aaron Gostein</option>
+  <option value="18">Taekseung Kim</option>
+  <option value="19">Advika Jayanti</option>
+</select>
+
+<script>
+  document.getElementById("studentDropdown").addEventListener("change", function() {
+    var selectedValue = this.value;
+    if (selectedValue === "1") {
+      document.getElementById("student1").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "2") {
+      document.getElementById("student2").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "3") {
+      document.getElementById("student3").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "4") {
+      document.getElementById("student4").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "5") {
+      document.getElementById("student5").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "6") {
+      document.getElementById("student6").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "7") {
+      document.getElementById("student7").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "8") {
+      document.getElementById("student8").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "9") {
+      document.getElementById("student9").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "10") {
+      document.getElementById("student10").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "11") {
+      document.getElementById("student11").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "12") {
+      document.getElementById("student12").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "13") {
+      document.getElementById("student13").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "14") {
+      document.getElementById("student14").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "15") {
+      document.getElementById("student15").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "16") {
+      document.getElementById("student16").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "17") {
+      document.getElementById("student17").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "18") {
+      document.getElementById("student18").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "19") {
+      document.getElementById("student19").scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+<div id="student1" class="container">
   <div class="highlight">
     <div class="title">Gender Homophily in Open Source Software Networks</div>
     <p></p>
-    <p><b>Katy Yu</b> (Advisor: Bogdan Vasilescu)</p>
+    <p><span class="subtitle">Katy Yu</span> (Advisor: Bogdan Vasilescu)</p>
     <b>Abstract:</b> While gender diversity in open-source software (OSS) has been widely studied, the seemingly opposite concept, gender
 homophily, where individuals tend to collaborate with those of the same gender, is less explored. It is, therefore, unclear
 whether gender homophily is present in OSS. If so, what are the reasons behind it? Does it benefit gender diversity in
@@ -95,8 +170,405 @@ rendering direct estimation of gender homophily unreliable. We ameliorate this p
 path distance of dyads of each type of gender composition and using it as a proxy for the social proximity of ties. In
 addition, we use exponential random graph models to estimate the probability of same-gender ties (i.e., the "node-match"
 statistic with respect to gender).
+<br>
 Our preliminary findings from a comprehensive OSS network dataset reveal nuanced patterns of gender-based collaboration. Moreover, women
 contributors exhibit a strong preference for collaborating with the same gender, a behavior confirmed by ERGM nodematch coefficients, where the probability of women-women ties is 28.3% more likely than men-men ties.
 The observed mean shortest path length of women-women dyads was 0.453 standard deviations shorter than the random baseline, which was in turn longer than that of the men-men dyads (0.36 standard deviations longer than the random baseline). 
+</div>
+</div>
+
+<div id="student2" class="container">
+  <div class="highlight">
+    <div class="title">Generating Python Test-Cases via Neural Speaker Models</div>
+    <p></p>
+    <p><span class="subtitle">Raunak Sood</span> (Advisors: Daniel Fried, Saujas Vaduguru)</p>
+    <b>Abstract:</b> A major area of research in neural code generation involves synthesizing programs from sample test cases. However,
+the main issue with this task is that many different programs can fit the specification outlined by a given test-suit. For
+instance, consider the task of generating regular expressions from example strings. If we provided the example, (ab,
+✔), the synthesizer could generate a+b* and a*b+c, both of which are consistent with the input example. Hence, the
+goal of this area of research is to pragmatically generate programs/test-cases by reasoning about what the user
+intended. In the example above, the synthesizer could reason that since the test-case was chosen intentionally, and
+the character c wasn't included in the test-case, the user intended the regex a+b* instead of a*b+c. Previous work by
+Vaduguru et. al tackles this problem on regular-expression synthesis by training speaker and listener models
+under the Rational Speech Acts (RSA) scheme to generate test cases and programs respectively. In this research
+project, we aim to adapt this technique to Python programs by generating test-cases using the large language models,
+CAT-LM. Then, after the model produces these test-cases, we can use inference-time algorithms to pragmatically
+select the most informative results.
+</div>
+</div>
+
+<div id="student3" class="container">
+  <div class="highlight">
+    <div class="title">Dynamic Query Optimization for Python UDFs</div>
+    <p></p>
+    <p><span class="subtitle">Kyle Booker</span> (Advisors: Andy Pavlo, Todd Mowry, Sam Arch)</p>
+    <b>Abstract:</b> Currently, executing OLAP database queries with user-defined functions (UDFs) in realworld workloads simply call the UDFs interpreter and naively executes the UDF before returning the result to the DBMS. This strategy is correct but incredibly inefficient. State-of-the-art
+research has adopted a just-in-time compiled strategy for more efficient execution for hot paths
+of UDFs. However, there are still many inefficiencies that can occur. Specifically, when there is a
+skewed data the best choice of compilation strategy may change throughout execution. Given
+this research into adaptive strategies that dynamically adjust the just-in-time compilation strategy
+based on real-time statistics could be more effective especially in a vectorized context.
+<br>
+
+My research for this semester centers around exploring the space of possible compilation
+strategies and optimizations that can be used to provide a subset of compilation strategies to be
+switched between dynamically at run-time. This research is important in identifying which
+compiler optimizations are always good versus context dependent. This will be done by first
+recreating results from the Babelfish paper and then extending their compiler to expose all of
+their optimizations as compiler flags that can be toggled and tested against the TPC-H
+benchmark.
+</div>
+</div>
+
+<div id="student4" class="container">
+  <div class="highlight">
+    <div class="title">Using LLM's on News Data to Predict Market Movement</div>
+    <p></p>
+    <p><span class="subtitle">Jerick Shi</span> (Advisor: Burton Hollifield)</p>
+    <b>Abstract:</b> Predicting the movement of the market and certain stocks has always been a huge topic during
+the past few decades. Knowing how the value of a certain sector market may move in the future
+provides much information for investors, since they use that information to develop strategies in
+order to maximize pro!t or minimize. However, market data is quite noisy, and it is challenging to
+choose the right data or the right model in order to create such predictions.
+<br>
+
+Our goal is to use LLM’s such as the GPT-4 model to create a portfolio of assets that minimizes risk.
+We shall use data from the Beige Book, which provides thorough summaries on economic conditions
+in di"erent districts in the US. Using such data, we shall use the LLM’s to make predictions on the
+correlations between di"erent stocks and bonds. Then, by using historical numerical data, we are
+able to predict the volatility of such assets. Using all these data, we will hopefully be able to create
+an allocation model that minimizes risk throughout di"erent time periods.
+</div>
+</div>
+
+<div id="student5" class="container">
+  <div class="highlight">
+    <div class="title">Youth-Driven Algorithm Auditing</div>
+    <p></p>
+    <p><span class="subtitle">Emily Amspoker</span> (Advisors: Jaemarie Solyst, Jessica Hammer)</p>
+    <b>Abstract:</b> Due to the proliferation of AI-driven technologies, youth have become key stakeholders in algorithmic systems. Youth, especially those from underserved communities, are often exposed to the harm
+inflicted by biases in these algorithms. Unfortunately, they are rarely consulted by the creators of
+these systems due to misconceptions about their ability to understand bias in AI at a high level
+as well as notions of equity and fairness. Prior workshop-based studies, however, demonstrated
+that with proper scaffolding, youth can understand and explain examples of bias in AI and ideate
+their own solutions. Building off of this work, this research project seeks to further understand
+how youth envision themselves changing algorithmic systems and what motivates youth to be
+involved with combating algorithmic bias. This will be achieved using two primary methods: first,
+a storyboarding study in which storytelling serves as a means to understand youth and parents’
+conceptions of their roles in algorithm auditing. The next part of the study will focus on prototyping
+and testing youth-friendly interface features within the framework of a pre-existing algorithmic
+system.
+</div>
+</div>
+
+<div id="student6" class="container">
+  <div class="highlight">
+    <div class="title">Enhancing Spatial Transcriptomics with Vision Transformers for Single-Cell Resolution Mapping</div>
+    <p></p>
+    <p><span class="subtitle">Anisha Chatterjee</span> (Advisor: Jose Lugo-Martinez)</p>
+    <b>Abstract:</b> Spatial transcriptomics allows scientists to measure the gene activity in a given tissue sample and
+map where the activity is occurring. It has greatly improved our ability to analyze gene
+expression within the context of different tissue structures, providing insights into cell-cell
+interactions and structural organization. Our project is to enhance current spatial transcriptomics
+methods by taking low-resolution data and transforming it to single-cell resolution. This process
+occurs in two steps. First, the pixel-level gene expression profile is created by applying XFuse,
+which relies on statistical modeling, on stained spot data. Using that data and additional cell
+image data, cells can then be spatially mapped and matched to their gene expression. The main
+challenge for this step is cell segmentation, essentially separating cells and understanding which
+cells belong in which spots. A popular method, SCS, first identifies cell nuclei from staining
+images using the Watershed algorithm. Then, the transformer model infers for each spot its
+relative position with respect to the nuclei of each cell. My project is to improve upon the SCS
+model by combining the steps from XFuse and SCS and using a vision transformer for both
+tasks. The goal is to improve accuracy and efficiency as more information is available.
+</div>
+</div>
+
+
+<div id="student7" class="container">
+  <div class="highlight">
+    <div class="title">Parameter Estimation for Structured Decoding Assumptions</div>
+    <p></p>
+    <p><span class="subtitle">Tanisha Saxena</span> (Advisor: Aayush Jain)</p>
+    <b>Abstract:</b> Following the discovery of quantum computing, many people have lost faith in the power
+of standard cryptography measures for data protection. Rightfully so, as the mathematical
+difficulty assumptions made to prove the security of many algorithms can be undone in the
+quantum world. To adapt, cryptographers have come up with “Learning with Errors” (LWE) – an
+assumption that holds strong even with quantum computing power. The promising nature of
+LWE means many cryptographers have chosen to avoid using other assumptions out of lack of
+research into their strength. Specifically, Learning Parity with Noise (LPN) has only been proven
+theoretically and thus its usefulness in real applications is unknown. In this paper, we estimate
+the concrete security of LPN by referencing <a href="https://github.com/malb/lattice-estimator">Albrech et. al’s lattice estimator for LWE</a> and
+showing that LPN’s parameters strongly influence its security. Furthermore, we prove the
+usefulness of LPN assumption by taking previous quantum algorithms and showing how LPN
+simplifies the proof strategy significantly. Our research on LPN allows cryptographers to
+develop a wider variety of protocols that are not only more efficient but more tolerant against
+adversary attacks because they use targeted assumptions rather than generic ones.
+</div>
+</div>
+
+<div id="student8" class="container">
+  <div class="highlight">
+    <div class="title">AI-Based Recommendations for Learning Optimal Treatment Strategies for Sepsis with UPMC Data</div>
+    <p></p>
+    <p><span class="subtitle">Maggie Cai</span> (Advisors: Adam Perer, Venkatesh Sivaraman)</p>
+    <b>Abstract:</b> AI/ML in healthcare has become increasingly popular since it has the potential to
+improve patient outcomes. My research will build upon previous studies on AI-based
+recommendations trained on MIMIC, a large public ICU dataset, for learning optimal treatment
+strategies for sepsis in intensive care. Sepsis is a condition that occurs when a response to fight
+infection results in inflammation in the body, causing the organs to fail. With sepsis treatment,
+patients are given a certain amount of IV fluids and vasopressors. However, treatment practices
+vary widely and decisional uncertainty is common. Thus, an AI model was built to help suggest
+optimal treatments for patients with sepsis. Based on patient information, such as vital signs and
+fluids/vasopressors previously received, and clinician recommendations, the AI model predicts
+the patient’s future disease severity. Researchers found that clinician recommendations have
+little or no impact on the model’s predictions. My work involves analyzing data from UPMC, a
+larger, more diverse, and not yet publicly available dataset, to determine if the information from
+clinician recommendations can be more meaningful to the AI model predictions. Once the
+UPMC dataset is preprocessed to match the format of MIMIC, I will be training XGBoost models
+to conduct my final analysis.
+</div>
+</div>
+
+<div id="student9" class="container">
+  <div class="highlight">
+    <div class="title">Optimization of MLSys Framework Using Speculative Inference and Asynchronous Verification</div>
+    <p></p>
+    <p><span class="subtitle">Lijie Yang</span> (Advisor: Zhihao Jia)</p>
+    <b>Abstract:</b> This project explores the optimization of Machine Learning Systems (MLSys) frameworks
+through the implementation of speculative inference and asynchronous verification, specifically
+targeting the enhancement of generative large language models (LLMs) like ChatGPT and GPT4. These models, characterized by their extensive computational and memory requirements, pose
+significant challenges in achieving quick and cost-effective service. The proposed system,
+SpecInfer, leverages small speculative models (SSMs) and a novel approach to token tree
+verification to predict and verify LLM outputs in parallel, reducing both processing time and
+computational resource demand. The innovation lies in conducting speculative inference and
+token tree verification simultaneously and asynchronously, optimizing the latency issues
+predominantly caused by the sequential verification process, which constitutes up to 80% of the
+total latency in existing systems. The project's goals are ambitious, aiming for a 1.5x-2x speedup
+in overall performance by rearchitecting the inference process to allow for more efficient
+speculation and verification phases. This involves the development of a new tokenizer optimized
+for speculative inference, with milestones set from initial planning to final implementation and
+testing. The research also encompasses a thorough literature review on tokenization methods,
+speculative inference research, and verification optimization to support the development of an
+optimized framework. With the ultimate aim of contributing to the open-source community, this
+project endeavors to significantly improve the inference latency of LLMs, enhancing their
+accessibility and efficiency for widespread use.
+</div>
+</div>
+
+<div id="student10" class="container">
+  <div class="highlight">
+    <div class="title">Improving Bounds on Quantum Spectrum Estimation</div>
+    <p></p>
+    <p><span class="subtitle">Elizabeth Knox</span> (Advisor: Ryan O'Donnell)</p>
+    <b>Abstract:</b> Quantum spectrum estimation is a fundamental problem related to learning quantum states. Suppose there is an
+unknown probability distribution \(p = (p_1, p_2, \cdots, p_d) \) that we would like to learn to some \( \epsilon \)-accuracy by taking a
+reasonably small number of samples from the distribution. This question appears frequently in classical computing,
+which could take \( n \) independent samples, create a distribution of each outcome’s sample frequency \(c = c_1, c_2, \cdots, c_d) \),
+and analyze the accuracy of estimating \( \hat{p_i} = \frac{c_i}{n} \). There is a caveat in quantum computing based on the measurement of
+qubits: a set of qubits can remain in superposition only up until they are measured, at which point they take on a
+random basic state dictated by the probability distribution encoded by the superposition. As a result, the quantum state
+learning algorithm cannot see the actual distribution of each outcome’s sample frequency. Instead, \(c_1, c_2, \cdots, c_d) \) 
+passed into the RSK algorithm, which generates a “Young diagram” distribution, from which we attempt to estimate the original distribution. 
+One simple method to estimate this distribution requires \( n = O(\frac{d^2}{\epsilon^2}) \) samples, and if \( n \) is
+significantly less, it is known that this method does not work. Additionally, it has been shown that \( n = O(\frac{d}{\epsilon^2}) \) is a
+lower bound on the samples required to get an \( \epsilon \)-accurate estimate. The goal of this research is to close the gap between
+the lower and upper bounds on quantum state estimation.
+</div>
+</div>
+
+<div id="student11" class="container">
+  <div class="highlight">
+    <div class="title">Adaptive Sampling For Fluid Simulations</div>
+    <p></p>
+    <p><span class="subtitle">Trey DuBose</span> (Advisor: Minchen Li)</p>
+    <b>Abstract:</b> I will be working to improve fluid simulation times and space resources by utilizing
+dynamic/adaptive radius sizes for sampling the fluid space and moving least-squared
+deformation gradient.
+</div>
+</div>
+
+<div id="student12" class="container">
+  <div class="highlight">
+    <div class="title">Batch-Parallel Updates for General Rake-Compress Trees</div>
+    <p></p>
+    <p><span class="subtitle">William Gay</span> (Advisor: Daniel Anderson)</p>
+    <b>Abstract:</b> Dynamic Trees are an important tool in the design of dynamic graph algorithms. The problem is to maintain a set of vertex disjoint trees, which can be
+updated by inserting and deleting edges. The structure should be able to efficiently \( O(log~ n) \) answer queries about the tree, such as the weight of a path, size
+of a sub-tree, or lowest-common-ancestor of two vertices. The Rake-Compress
+(RC) Tree algorithm solves this problem by iteratively contracting vertices into
+clusters, which are also contracted until the structure is balanced and can be
+efficiently traversed. In the parallel-batch dynamic setting, the goal is to handle multiple insert and delete operations concurrently. Previous solutions for
+the parallel batch-dynamic update problem have been randomized and assume
+a fixed static algorithm for the initial compression. Therefore, our goal is to
+have an algorithm that is deterministic and independent of any particular static
+algorithm. The algorithm should be able to perform a batch update of k insert/delete operations in \( O(k~ log(1 + \frac{n}{k} )) \) worst-case work and low \( O(polylog~ n) \) span.
+</div>
+</div>
+
+<div id="student13" class="container">
+  <div class="highlight">
+    <div class="title">Understanding Catastrophic Forgetting in Language Models via Implicit Task Inference Shift</div>
+    <p></p>
+    <p><span class="subtitle">Kunal Kapoor</span> (Advisors: Suhas Kotha, Aditi Ragunathan)</p>
+    <b>Abstract:</b> This research project investigates the phenomenon of forgetting in large neural networks and
+aims to isolate the underlying causes, moving beyond traditional capacity-related explanations.
+Building on the observation that model size does improve forgetting, the study employs a
+systematic approach to identify the "real" reasons behind forgetting and explores the hypothesis
+that increasing capacity changes the loss landscape, making it easier to optimize. The work
+involves rerunning code with non-repeating training data, saving plots for cleaner visualization,
+and meticulously examining the interaction between model size and forgetting.
+The project leverages insights from various papers, including Deep Double Descent, Implicit
+Bias of Gradient Descent on Linearly Separable Data, and Benign Overfitting in Linear
+Regression, to inform theories and experimental design. Notably, a synthetic experiment is
+conducted, involving fine-tuning on Gaussian distributions, to analyze how the model output
+evolves during the process and assess the existence of forgetting. Literature review
+encompasses theories on fine-tuning, neural tangent kernels, and the impact of model and
+pretraining scale on catastrophic forgetting. This research also delves into representation
+overlap matrices and explores unconventional methods to mitigate forgetting.
+This research contributes to a deeper understanding of forgetting in overparameterized neural
+networks, offering insights that extend beyond conventional wisdom and providing a foundation
+for future work in optimizing training dynamics.
+</div>
+</div>
+
+<div id="student14" class="container">
+  <div class="highlight">
+    <div class="title">Learning Useful Representations for Music Information Retrieval with MusicGen</div>
+    <p></p>
+    <p><span class="subtitle">Jaehee Kim</span> (Advisor: Chris Donahue)</p>
+    <b>Abstract:</b> This research proposes a novel approach that employs the advanced representations of
+MusicGen within the structure of the Jukebox model. By conducting a systematic reproduction
+of the original Jukebox experiments, this project aims to assess the potential enhancements
+MusicGen’s representations bring to the complexity and quality of generated musical
+compositions. To integrate MusicGen’s representations, the model’s parameters will be adjusted
+to accommodate the new inputs. An analysis of MusicGen’s output representations will be
+conducted to understand their structure, dimensions, and how they encapsulate musical
+information differently from Jukebox. Then, the input layers of the Jukebox model will be
+adjusted to ensure compatibility with MusicGen’s data format, which will include steps of data
+preprocessing, input layer adaption (changing the size of the input layer to accommodate
+different token sizes or types of musical information (e.g., embedding dimensions for notes,
+rhythms)), feature normalization, and embedding integration. The core of the research will
+involve a comparative analysis between the outputs of the original Jukebox model and the
+modified version utilizing MusicGen. Success will be measured through a combination of
+quantitative metrics and qualitative assessments. Such measures include BLEU scores (for
+lyrical consistency), Melody Similarity Metrics (for tune comparability), custom metrics for
+harmony and rhythm alignment, and human listeners. Furthermore, computational efficiency,
+including training time and resource utilization, will be evaluated.
+</div>
+</div>
+
+<div id="student15" class="container">
+  <div class="highlight">
+    <div class="title">Cyber Security and Social Sciences: How do Social Factors Affect Cyber Security?</div>
+    <p></p>
+    <p><span class="subtitle">Emily Estrada</span> (Advisors: Geoffrey Dobson, Kathleen Carl)</p>
+    <b>Abstract:</b> For my research project, I will be adding to the existing PicoCTF educational website. The goal
+for now is to come up with an idea that can be implemented in order to add to the range of
+cybersecurity topics being covered by PicoCTF. The goal of picoCTF is to encourage middle
+and high school students to learn about cybersecurity through fun puzzles. The puzzles are built
+using a “ramp” style where the exercises begin by teaching some basic foundation about a topic
+in cybersecurity, and then increasingly get more difficult. This style of learning allows students to
+build upon their foundation and eventually master the topic they are learning about. The different
+areas are web exploits, forensics, cryptography, reverse engineering, and general skills which
+test foundational computer science skills, such as binary exploits. For now, I am looking for a
+new area of cybersecurity to add to picoCTF, perhaps by building extra exercises in that topic or
+through another way that will effectively help students learn about cybersecurity.
+</div>
+</div>
+
+<div id="student16" class="container">
+  <div class="highlight">
+    <div class="title">Faster Music Generation with Speculative Decoding</div>
+    <p></p>
+    <p><span class="subtitle">Dongkyun Kim</span> (Advisor: Chris Donahue)</p>
+    <b>Abstract:</b> Autoregressive transformer-based decoders paired with quantized audio tokenizers are
+the dominating method for music generation models due to their high fidelity
+reconstruction capabilities. The autoregressive decoding process, however, leads to the
+inference speed of these models scaling to the number of codebooks. While methods
+utilizing parallel codebook interleaving patterns have been presented, their
+implementation is impeded by the challenges of considering the conditional dependence
+between different codebook levels.
+<br>
+
+In this work, we will introduce a novel inference strategy for music generation models by
+incorporating dual pattern speculative decoding. Speculative decoding is a technique
+widely used in large language models, where a smaller draft model predicts potential
+future sequences and the original model validates it, thus taking advantage of
+parallelism. Dual pattern speculative decoding extends this concept by utilizing the
+delayed codebook pattern model as the draft model while utilizing the flatten codebook
+pattern model as the validator. Thus, the method effectively leverages parallel codebook
+interleaving without sacrificing the high generation capabilities of sequential methods.
+
+Our work offers new pathways for improving the performance of music generation
+systems. It also may allow real-time, high-fidelity music generation, opening up new
+possibilities for interactive music applications, live performance aids, and more efficient
+music composition tools.
+</div>
+</div>
+
+<div id="student17" class="container">
+  <div class="highlight">
+    <div class="title">Proving Validity of CSL With Relaxed Memory Models</div>
+    <p></p>
+    <p><span class="subtitle">Aaron Gostein</span> (Advisor: Stephen Brookes)</p>
+    <b>Abstract:</b> Concurrent Separation Logic (CSL) is a logic system originally invented by Peter O'Hearn and
+Stephen Brookes that extends Separation Logic, which reasons about programs that manipulate
+data on both a store and a heap, to concurrent programming. Originally in 2007, CSL was proved
+valid by O'Hearn and Brookes using execution traces (step-by-step logs of the actions of a
+program). An implicit assumption in this proof is sequential consistency (SC) of the computer's
+memory model, meaning there is a total order on all reads and writes of a program. However this
+assumption is not necessarily guaranteed on modern computer architectures, many of which offer
+more relaxed guarantees about memory management such as Total Store Order (TSO), meaning
+there is a total order on all writes of a program, and Partial Store Order (PSO), meaning for each
+variable there is a total order an all writes to that variable. In this project we **hope to** show an
+alternative proof of the validity of CSL using DAGs representing order relationships between
+memory actions, which demonstrates that CSL is still valid under these weaker memory
+guarantees.
+</div>
+</div>
+
+<div id="student18" class="container">
+  <div class="highlight">
+    <div class="title">Range Search with Parallel ANN</div>
+    <p></p>
+    <p><span class="subtitle">Taekseung Kim</span> (Advisors: Guy Blelloch, Magdalen Dobson)</p>
+    <b>Abstract:</b> I will be working on Parallel ANN used on range search. Parallel ANN is a parallel
+algorithm that is used for finding k nearest neighbor problem, in parallel context. It is used
+for both high dimensional data, and also low dimensional data. Originally range search
+was going to be added in the library, but current dataset does not fit the theoretical results.
+There are some hypotheses for this problem. First, the dataset itself has some clique, or
+very clustered point so that we cannot form the graph correctly. Second, we are not even
+sure about how the dataset should be fixed. Our goal is to try contraction on some dense
+points and find out if that approach works, and then try to update the range search code
+on graph based algorithm so that the graph range search performs better than bucket
+based algorithm.
+</div>
+</div>
+
+<div id="student19" class="container">
+  <div class="highlight">
+    <div class="title">Broadaning Music Generation Models to Indian Classical Music</div>
+    <p></p>
+    <p><span class="subtitle">Advika Jayanti</span> (Advisor: Chris Donahue)</p>
+    <b>Abstract:</b> For this project we aim to replicate and expand upon the Music Information Retrieval
+(MIR) capabilities demonstrated by Jukebox, a state-of-the-art music generation model,
+utilizing MusicGen as a more computationally efficient alternative. Drawing inspiration
+from recent advancements in Natural Language Processing (NLP), we propose a novel
+approach that treats music as a sequence of tokens, enabling the application of NLP
+methods to extract musically relevant information from audio recordings. Our
+methodology involves pre-training MusicGen on a diverse dataset of audio recordings
+paired with labels, followed by fine-tuning the model for specific MIR tasks. We provide
+a comprehensive evaluation of MusicGen's performance on benchmark MIR tasks,
+including beat and chord detection, source separation, and genre classification,
+comparing its efficacy against Jukebox. Additionally, we explore the potential for transfer
+learning by leveraging MusicGen's learned representations for downstream MIR tasks,
+such as predicting the melodic structure and ragas in Indian classical music. By
+leveraging MusicGen's simplicity, we aim to provide access for better applications in
+music analysis and synthesis.
+</div>
+</div>
+
+
+
   </body>
 </html>
