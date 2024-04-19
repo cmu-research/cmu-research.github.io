@@ -143,7 +143,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     } else if (selectedValue === "18") {
       document.getElementById("student18").scrollIntoView({ behavior: 'smooth' });
     } else if (selectedValue === "19") {
-      document.getElementById("student19").scrollIntoView({ behavior: 'smooth' });
+      document.getElementById("student14").scrollIntoView({ behavior: 'smooth' });
     }
   });
 </script>
@@ -157,20 +157,38 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     <div class="title">Gender Homophily in Open Source Software Networks</div>
     <p></p>
     <p><span class="subtitle">Katy Yu</span> (Advisor: Bogdan Vasilescu)</p>
-    <b>Abstract:</b> While gender diversity in open-source software (OSS) has been widely studied, the seemingly opposite concept, gender
-homophily, where individuals tend to collaborate with those of the same gender, is less explored. It is, therefore, unclear
-whether gender homophily is present in OSS. If so, what are the reasons behind it? Does it benefit gender diversity in
-OSS or work against it? This study presents an initial exploration into the existence of gender homophily within OSS
-networks and seeks to unravel the underlying mechanisms of this phenomenon.
-Our study utilizes the World of Code dataset, encompassing the FLOSS ecosystem, which includes binary gender
-data inferred from contributor names. We construct OSS collaboration networks where the ties represent the developer
-collaborations on projects from 2008 to 2022 and extract the network backbone using the computed significance score of
-edge weights. The network's gender composition is extremely skewed (66.38% men, 2.70% women, 30.92% unknown),
-rendering direct estimation of gender homophily unreliable. We ameliorate this problem by estimating the mean shortest
-path distance of dyads of each type of gender composition and using it as a proxy for the social proximity of ties. In
-addition, we use exponential random graph models to estimate the probability of same-gender ties (i.e., the "node-match"
-statistic with respect to gender).
-<br>
+    <b>Abstract:</b> While gender diversity in open-source software (OSS) has been widely
+studied, the seemingly opposite concept, gender homophily, where individuals tend to
+collaborate with those of the same gender, is less explored. It is, therefore, unclear
+whether gender homophily is present in OSS. If so, what are the reasons behind it?
+Does it benefit gender diversity in OSS or work against it? This study presents an initial
+exploration into the existence of gender homophily within OSS networks and seeks to
+unravel the underlying mechanisms of this phenomenon.
+
+<p></p>
+Our study utilizes the World of Code dataset, encompassing the FLOSS ecosystem,
+which includes binary gender data inferred from contributor names. We construct OSS
+collaboration networks where the ties represent the developer collaborations on projects
+from 2008 to 2022 and extract the network backbone using the computed significance
+score of edge weights. The network's gender composition is extremely skewed (66.38%
+men, 2.70% women, 30.92% unknown), rendering direct estimation of gender
+homophily unreliable. We ameliorate this problem by estimating the mean shortest path
+distance of dyads of each type of gender composition and using it as a proxy for the
+social proximity of ties. In addition, we use exponential random graph models to
+estimate the probability of same-gender ties (i.e., the "node-match" statistic with respect
+to gender).
+
+<p></p>
+Our preliminary findings from a comprehensive OSS network dataset reveal nuanced
+patterns of gender-based collaboration. Moreover, women contributors exhibit a strong
+preference for collaborating with the same gender, a behavior confirmed by ERGM
+nodematch coefficients, where the probability of women-women ties is 28.3% more
+likely than men-men ties. The observed mean shortest path length of women-women
+dyads was 0.453 standard deviations shorter than the random baseline, which was in
+turn longer than that of the men-men dyads (0.36 standard deviations longer than the
+random baseline).
+
+<p></p>
 Our preliminary findings from a comprehensive OSS network dataset reveal nuanced patterns of gender-based collaboration. Moreover, women
 contributors exhibit a strong preference for collaborating with the same gender, a behavior confirmed by ERGM nodematch coefficients, where the probability of women-women ties is 28.3% more likely than men-men ties.
 The observed mean shortest path length of women-women dyads was 0.453 standard deviations shorter than the random baseline, which was in turn longer than that of the men-men dyads (0.36 standard deviations longer than the random baseline). 
@@ -179,12 +197,10 @@ The observed mean shortest path length of women-women dyads was 0.453 standard d
 
 <div id="student2" class="container">
   <div class="highlight">
-    <div class="title">Generating Python Test-Cases via Neural Speaker Models</div>
+    <div class="title">Using Large Language Models to Generate Pragmatic Test Cases</div>
     <p></p>
     <p><span class="subtitle">Raunak Sood</span> (Advisors: Daniel Fried, Saujas Vaduguru)</p>
-    <b>Abstract:</b> A major area of research in neural code generation involves synthesizing programs from sample test cases. However,
-the main issue with this task is that many different programs can fit the specification outlined by a given test-suit. For
-instance, consider the task of generating regular expressions from example strings. If we provided the example, (ab,
+    <b>Abstract:</b> A major area of research in neural code generation involves synthesizing programs from sample test cases. However, the main issue with this task is that many different programs can fit the specification outlined by a given test-suit. For instance, consider the task of generating regular expressions from example strings. If we provided the example, (ab,
 ✔), the synthesizer could generate a+b* and a*b+c, both of which are consistent with the input example. Hence, the
 goal of this area of research is to pragmatically generate programs/test-cases by reasoning about what the user
 intended. In the example above, the synthesizer could reason that since the test-case was chosen intentionally, and
@@ -199,45 +215,42 @@ select the most informative results.
 
 <div id="student3" class="container">
   <div class="highlight">
-    <div class="title">Dynamic Query Optimization for Python UDFs</div>
+    <div class="title">Toward Finding the Minimal Superpermutation of Six Symbols</div>
     <p></p>
-    <p><span class="subtitle">Kyle Booker</span> (Advisors: Andy Pavlo, Todd Mowry, Sam Arch)</p>
-    <b>Abstract:</b> Currently, executing OLAP database queries with user-defined functions (UDFs) in realworld workloads simply call the UDFs interpreter and naively executes the UDF before returning the result to the DBMS. This strategy is correct but incredibly inefficient. State-of-the-art
-research has adopted a just-in-time compiled strategy for more efficient execution for hot paths
-of UDFs. However, there are still many inefficiencies that can occur. Specifically, when there is a
-skewed data the best choice of compilation strategy may change throughout execution. Given
-this research into adaptive strategies that dynamically adjust the just-in-time compilation strategy
-based on real-time statistics could be more effective especially in a vectorized context.
-<br>
-
-My research for this semester centers around exploring the space of possible compilation
-strategies and optimizations that can be used to provide a subset of compilation strategies to be
-switched between dynamically at run-time. This research is important in identifying which
-compiler optimizations are always good versus context dependent. This will be done by first
-recreating results from the Babelfish paper and then extending their compiler to expose all of
-their optimizations as compiler flags that can be toggled and tested against the TPC-H
-benchmark.
+    <p><span class="subtitle">Kyle Booker</span> (Advisor: Marijn Heule)</p>
+    <b>Abstract:</b> Superpermutations are combinatorial structures whose properties have remained enigmatic to
+mathematicians for decades. Specifically, inquiries into the length of the minimum
+superpermutation composed of \( n\) symbols have yielded mixed results. While there have been
+proofs showing that the lower and upper bounds converge on long predicted values for n between
+1 and 5, the value for 6 has been shown to defy such predictions and its exact value is not known.
+In this paper, we present three different techniques for encoding the superpermutation problem as
+an instance of the satisfiability problem. Using state-of-the-art SAT solving techniques, we
+replicate the previously known bounds, opening the door to potentially solve for the case where n
+is 6.
 </div>
 </div>
 
 <div id="student4" class="container">
   <div class="highlight">
-    <div class="title">Using LLM's on News Data to Predict Market Movement</div>
+    <div class="title">Predicting Market Movement using Large Language Models</div>
     <p></p>
     <p><span class="subtitle">Jerick Shi</span> (Advisor: Burton Hollifield)</p>
-    <b>Abstract:</b> Predicting the movement of the market and certain stocks has always been a huge topic during
-the past few decades. Knowing how the value of a certain sector market may move in the future
-provides much information for investors, since they use that information to develop strategies in
-order to maximize pro!t or minimize. However, market data is quite noisy, and it is challenging to
-choose the right data or the right model in order to create such predictions.
+    <b>Abstract:</b> Predicting the movement of the stock market and other assets has been valuable over
+the past few decades. Knowing how the value of a certain sector market may move in
+the future provides much information for investors, as they use that information to
+develop strategies in order to maximize profit or minimize risk. However, market data is
+quite noisy, and it is challenging to choose the right data or the right model to create
+such predictions.
 <br>
 
-Our goal is to use LLM’s such as the GPT-4 model to create a portfolio of assets that minimizes risk.
-We shall use data from the Beige Book, which provides thorough summaries on economic conditions
-in di"erent districts in the US. Using such data, we shall use the LLM’s to make predictions on the
-correlations between di"erent stocks and bonds. Then, by using historical numerical data, we are
-able to predict the volatility of such assets. Using all these data, we will hopefully be able to create
-an allocation model that minimizes risk throughout di"erent time periods.
+Our goal is to use LLM's such as the GPT-3.5 model to create a portfolio of assets that
+minimizes risk. We use data from economic texts such as the Federal Reserve Beige
+Book, which provides summaries of economic conditions in different districts in the US.
+Using such data, we then employ such LLM's to make predictions on the correlations
+between different stocks and bonds as well as their volatility. We compare these results
+with other statistical learning models and provide understanding on whether knowing
+the economic conditions improves investment decisions, as well as providing an
+investment strategy fullying reliant on these LLM models.
 </div>
 </div>
 
@@ -266,43 +279,33 @@ system.
     <div class="title">Enhancing Spatial Transcriptomics with Vision Transformers for Single-Cell Resolution Mapping</div>
     <p></p>
     <p><span class="subtitle">Anisha Chatterjee</span> (Advisor: Jose Lugo-Martinez)</p>
-    <b>Abstract:</b> Spatial transcriptomics allows scientists to measure the gene activity in a given tissue sample and
-map where the activity is occurring. It has greatly improved our ability to analyze gene
-expression within the context of different tissue structures, providing insights into cell-cell
-interactions and structural organization. Our project is to enhance current spatial transcriptomics
-methods by taking low-resolution data and transforming it to single-cell resolution. This process
-occurs in two steps. First, the pixel-level gene expression profile is created by applying XFuse,
-which relies on statistical modeling, on stained spot data. Using that data and additional cell
-image data, cells can then be spatially mapped and matched to their gene expression. The main
-challenge for this step is cell segmentation, essentially separating cells and understanding which
-cells belong in which spots. A popular method, SCS, first identifies cell nuclei from staining
-images using the Watershed algorithm. Then, the transformer model infers for each spot its
-relative position with respect to the nuclei of each cell. My project is to improve upon the SCS
-model by combining the steps from XFuse and SCS and using a vision transformer for both
-tasks. The goal is to improve accuracy and efficiency as more information is available.
+    <b>Abstract:</b> Spatial transcriptomics allows scientists to measure the gene activity in a given tissue sample and map where the activity is occurring. It has greatly improved our ability to analyze gene expression within the context of different tissue structures, providing insights into cell-cell interactions and structural organization. Our project is to enhance current spatial transcriptomics methods by taking low-resolution data and transforming it to single-cell resolution. This process occurs in two steps. First, the pixel-level gene expression profile is created by applying XFuse, which relies on statistical modeling, on stained spot data. Using that data and additional cell image data, cells can then be spatially mapped and matched to their gene expression. The main challenge for this step is cell segmentation, essentially separating cells and understanding which cells belong in which spots. A popular method, SCS, first identifies cell nuclei from staining images using the Watershed algorithm. Then, the transformer model infers for each spot its relative position with respect to the nuclei of each cell. My project is to improve upon the SCS model by combining the steps from XFuse and SCS and using a vision transformer for both tasks. The goal is to improve accuracy and efficiency as more information is available.
 </div>
 </div>
 
 
 <div id="student7" class="container">
   <div class="highlight">
-    <div class="title">Parameter Estimation for Structured Decoding Assumptions</div>
+    <div class="title">Hardness Estimation for Learning Parity with Noise: Adding Variety to Quantum
+Cryptography
+</div>
     <p></p>
     <p><span class="subtitle">Tanisha Saxena</span> (Advisor: Aayush Jain)</p>
-    <b>Abstract:</b> Following the discovery of quantum computing, many people have lost faith in the power
-of standard cryptography measures for data protection. Rightfully so, as the mathematical
-difficulty assumptions made to prove the security of many algorithms can be undone in the
-quantum world. To adapt, cryptographers have come up with “Learning with Errors” (LWE) – an
-assumption that holds strong even with quantum computing power. The promising nature of
-LWE means many cryptographers have chosen to avoid using other assumptions out of lack of
-research into their strength. Specifically, Learning Parity with Noise (LPN) has only been proven
-theoretically and thus its usefulness in real applications is unknown. In this paper, we estimate
-the concrete security of LPN by referencing <a href="https://github.com/malb/lattice-estimator">Albrech et. al’s lattice estimator for LWE</a> and
-showing that LPN’s parameters strongly influence its security. Furthermore, we prove the
-usefulness of LPN assumption by taking previous quantum algorithms and showing how LPN
-simplifies the proof strategy significantly. Our research on LPN allows cryptographers to
-develop a wider variety of protocols that are not only more efficient but more tolerant against
-adversary attacks because they use targeted assumptions rather than generic ones.
+    <b>Abstract:</b> Following the discovery of quantum computing, many people have lost faith in the
+power of standard cryptography measures for data protection. Rightfully so, as the
+mathematical difficulty assumptions made to prove the security of many algorithms can
+be undone in the quantum world. To adapt, cryptographers have come up with
+“Learning with Errors” (LWE) – an assumption that holds strong even with quantum
+computing power. The promising nature of LWE means many cryptographers have chosen to avoid using other assumptions out of lack of research into their strength.
+Specifically, Learning Parity with Noise (LPN) has only been proven theoretically and
+thus its usefulness in real applications is unknown. In this paper, we estimate the
+concrete security of LPN by referencing Albrech et. al’s lattice estimator for LWE and
+showing that LPN’s parameters strongly influence its security. Furthermore, we prove
+the usefulness of LPN assumption by taking previous quantum algorithms and showing
+how LPN simplifies the proof strategy significantly. Our research on LPN allows
+cryptographers to develop a wider variety of protocols that are not only more efficient
+but more tolerant against adversary attacks because they use targeted assumptions
+rather than generic ones.
 </div>
 </div>
 
@@ -311,21 +314,24 @@ adversary attacks because they use targeted assumptions rather than generic ones
     <div class="title">AI-Based Recommendations for Learning Optimal Treatment Strategies for Sepsis with UPMC Data</div>
     <p></p>
     <p><span class="subtitle">Maggie Cai</span> (Advisors: Adam Perer, Venkatesh Sivaraman)</p>
-    <b>Abstract:</b> AI/ML in healthcare has become increasingly popular since it has the potential to
-improve patient outcomes. My research will build upon previous studies on AI-based
-recommendations trained on MIMIC, a large public ICU dataset, for learning optimal treatment
-strategies for sepsis in intensive care. Sepsis is a condition that occurs when a response to fight
-infection results in inflammation in the body, causing the organs to fail. With sepsis treatment,
-patients are given a certain amount of IV fluids and vasopressors. However, treatment practices
-vary widely and decisional uncertainty is common. Thus, an AI model was built to help suggest
-optimal treatments for patients with sepsis. Based on patient information, such as vital signs and
-fluids/vasopressors previously received, and clinician recommendations, the AI model predicts
-the patient’s future disease severity. Researchers found that clinician recommendations have
-little or no impact on the model’s predictions. My work involves analyzing data from UPMC, a
-larger, more diverse, and not yet publicly available dataset, to determine if the information from
-clinician recommendations can be more meaningful to the AI model predictions. Once the
-UPMC dataset is preprocessed to match the format of MIMIC, I will be training XGBoost models
-to conduct my final analysis.
+    <b>Abstract:</b> AI/ML in healthcare has become increasingly popular since it has the
+potential to improve patient outcomes. My research builds upon previous studies on
+AI-based recommendations trained on MIMIC, a large public ICU dataset, for learning
+optimal treatment strategies for sepsis in intensive care. Sepsis is a condition that
+occurs when a response to fight infection results in inflammation in the body, causing
+the organs to fail. With sepsis treatment, patients are given a certain amount of IV fluids
+and vasopressor drugs. However, treatment practices vary widely and decisional
+uncertainty is common. Thus, an AI model was built to help suggest optimal treatments
+for patients with sepsis. Based on patient information, such as vital signs and
+fluids/vasopressors previously received, and clinician recommendations, the AI model
+predicts the patient’s future disease severity. Researchers found that clinician
+recommendations have little or no impact on the model’s predictions. My work involves
+analyzing data from UPMC, a larger, more diverse, and not yet publicly available
+dataset, to determine if the information from clinician recommendations can be more
+meaningful to the AI model predictions. Analyzing the UPMC data showed that clinician
+recommendations do impact the model’s predictions, contrary to the findings in MIMIC.
+Using a slice-based analysis technique, I aim to determine the reason behind this
+discrepancy.
 </div>
 </div>
 
@@ -357,122 +363,86 @@ accessibility and efficiency for widespread use.
 
 <div id="student10" class="container">
   <div class="highlight">
-    <div class="title">Improving Bounds on Quantum Spectrum Estimation</div>
+    <div class="title">Very explicit high-dimensional expanders</div>
     <p></p>
     <p><span class="subtitle">Elizabeth Knox</span> (Advisor: Ryan O'Donnell)</p>
-    <b>Abstract:</b> Quantum spectrum estimation is a fundamental problem related to learning quantum states. Suppose there is an
-unknown probability distribution \(p = (p_1, p_2, \cdots, p_d) \) that we would like to learn to some \( \epsilon \)-accuracy by taking a
-reasonably small number of samples from the distribution. This question appears frequently in classical computing,
-which could take \( n \) independent samples, create a distribution of each outcome’s sample frequency \(c = c_1, c_2, \cdots, c_d) \),
-and analyze the accuracy of estimating \( \hat{p_i} = \frac{c_i}{n} \). There is a caveat in quantum computing based on the measurement of
-qubits: a set of qubits can remain in superposition only up until they are measured, at which point they take on a
-random basic state dictated by the probability distribution encoded by the superposition. As a result, the quantum state
-learning algorithm cannot see the actual distribution of each outcome’s sample frequency. Instead, \(c_1, c_2, \cdots, c_d) \) 
-passed into the RSK algorithm, which generates a “Young diagram” distribution, from which we attempt to estimate the original distribution. 
-One simple method to estimate this distribution requires \( n = O(\frac{d^2}{\epsilon^2}) \) samples, and if \( n \) is
-significantly less, it is known that this method does not work. Additionally, it has been shown that \( n = O(\frac{d}{\epsilon^2}) \) is a
-lower bound on the samples required to get an \( \epsilon \)-accurate estimate. The goal of this research is to close the gap between
-the lower and upper bounds on quantum state estimation.
+    <b>Abstract:</b> In this research, we investigate a class of expander graphs known as “Ramanujan
+graphs”, which, while useful in applications, are mathematically complex to construct.
+While they have good connectivity and pseudorandomness properties, expander graphs
+are generally sparse. We aim to represent them in ways that make computing the
+neighborhood of a vertex efficient, to improve the efficiency of using them in applications
+like random walks. Recent work demonstrated “local” constructions of Ramanujan
+graphs, which use a function to map from vertices (n-bit binary strings) to the
+neighborhood of the input vertex (i.e. to a subset of n-bit binary strings) by manipulating
+only a constant number of bits from the label. Such a local description would allow
+constant-time lookups for the neighborhood of a vertex. The purpose of this project is to
+programmatically verify the local construction of Ramanujan graphs presented in
+previous work by comparing properties of the neighborhoods and adjacency matrix we
+generate to known properties of Ramanujan graphs
 </div>
 </div>
 
 <div id="student11" class="container">
   <div class="highlight">
-    <div class="title">Adaptive Sampling For Fluid Simulations</div>
+    <div class="title">Spatially Adaptive Fluids Using Dynamic Radius in SPH Methods</div>
     <p></p>
     <p><span class="subtitle">Trey DuBose</span> (Advisor: Minchen Li)</p>
-    <b>Abstract:</b> I will be working to improve fluid simulation times and space resources by utilizing
-dynamic/adaptive radius sizes for sampling the fluid space and moving least-squared
-deformation gradient.
+    <b>Abstract:</b> The current practice of fluid simulations with smoothed particle hydrodynamics (SPH) methods use fixed radius sizes or at least fixed sizes of integration. However, this fixes the level of detail/accuracy that is able to be represented in any simulation. In any given simulation there will be areas where high detail is necessary/beneficial and there are other areas where low detail is required and oversampling is unnecessary or redundant. With my project I aim to demonstrate how using an adaptive radius scheme can be used to improve the computational effectiveness of fluid simulations. To achieve the intended effects I will first demonstrate how to handle particles of different sizes in a complex simulation environment and secondly I will demonstrate how the radius sizes can be changed over time depending on its surrounding environment with regards to fluid density and internal forces. Lastly, I will show how my results compare to the current state of the art methods that don’t have adaptive radii.
+
 </div>
 </div>
 
 <div id="student12" class="container">
   <div class="highlight">
-    <div class="title">Batch-Parallel Updates for General Rake-Compress Trees</div>
+    <div class="title">Deterministic Parallel Batch-Dynamic Tree Contraction</div>
     <p></p>
     <p><span class="subtitle">William Gay</span> (Advisor: Daniel Anderson)</p>
-    <b>Abstract:</b> Dynamic Trees are an important tool in the design of dynamic graph algorithms. The problem is to maintain a set of vertex disjoint trees, which can be
-updated by inserting and deleting edges. The structure should be able to efficiently \( O(log~ n) \) answer queries about the tree, such as the weight of a path, size
-of a sub-tree, or lowest-common-ancestor of two vertices. The Rake-Compress
-(RC) Tree algorithm solves this problem by iteratively contracting vertices into
-clusters, which are also contracted until the structure is balanced and can be
-efficiently traversed. In the parallel-batch dynamic setting, the goal is to handle multiple insert and delete operations concurrently. Previous solutions for
-the parallel batch-dynamic update problem have been randomized and assume
-a fixed static algorithm for the initial compression. Therefore, our goal is to
-have an algorithm that is deterministic and independent of any particular static
-algorithm. The algorithm should be able to perform a batch update of k insert/delete operations in \( O(k~ log(1 + \frac{n}{k} )) \) worst-case work and low \( O(polylog~ n) \) span.
+    <b>Abstract:</b> Dynamic Trees are an important tool in the design of dynamic graph algorithms. The
+problem is to maintain a set of vertex disjoint trees, which can be updated by inserting
+and deleting edges. The structure should be able to efficiently (\( O(log(n)) \)) answer
+queries about the tree, such as the weight of a path, size of a sub-tree, or
+lowest-common-ancestor of two vertices. The Rake-Compress (RC) Tree algorithm
+solves this problem by iteratively contracting vertices into clusters, which are also
+contracted until the structure is balanced and can be efficiently traversed. In the
+parallel-batch dynamic setting, the goal is to handle multiple insert and delete
+operations concurrently. Previous solutions for the parallel batch-dynamic update
+problem have been randomized. We present deterministic algorithms for performing
+static compression and batch-updates on RC Trees. That static algorithm performs \( O(n) \)
+work and \( O(log(n)log^*(n)) \) span, and the dynamic update algorithm perform 
+\( O(k~ log(1 + \frac{n}{k} )) \) work and \( O(log(n)log^*(k)) \) span on an update batch of size \( k \), 
+making both algorithms work efficient with low span.
 </div>
 </div>
 
 <div id="student13" class="container">
   <div class="highlight">
-    <div class="title">Understanding Catastrophic Forgetting in Language Models via Implicit Task Inference Shift</div>
+    <div class="title">Examining Catastrophic Forgetting in Synthetic Setups</div>
     <p></p>
     <p><span class="subtitle">Kunal Kapoor</span> (Advisors: Suhas Kotha, Aditi Ragunathan)</p>
-    <b>Abstract:</b> This research project investigates the phenomenon of forgetting in large neural networks and
-aims to isolate the underlying causes, moving beyond traditional capacity-related explanations.
-Building on the observation that model size does improve forgetting, the study employs a
-systematic approach to identify the "real" reasons behind forgetting and explores the hypothesis
-that increasing capacity changes the loss landscape, making it easier to optimize. The work
-involves rerunning code with non-repeating training data, saving plots for cleaner visualization,
-and meticulously examining the interaction between model size and forgetting.
-The project leverages insights from various papers, including Deep Double Descent, Implicit
-Bias of Gradient Descent on Linearly Separable Data, and Benign Overfitting in Linear
-Regression, to inform theories and experimental design. Notably, a synthetic experiment is
-conducted, involving fine-tuning on Gaussian distributions, to analyze how the model output
-evolves during the process and assess the existence of forgetting. Literature review
-encompasses theories on fine-tuning, neural tangent kernels, and the impact of model and
-pretraining scale on catastrophic forgetting. This research also delves into representation
-overlap matrices and explores unconventional methods to mitigate forgetting.
-This research contributes to a deeper understanding of forgetting in overparameterized neural
-networks, offering insights that extend beyond conventional wisdom and providing a foundation
-for future work in optimizing training dynamics.
+    <b>Abstract:</b> This research project investigates the phenomenon of forgetting in large neural networks and aims to isolate the underlying causes, moving beyond traditional capacity-related explanations. Building on the observation that model size does improve forgetting, the study employs a systematic approach to identify the "real" reasons behind forgetting and explores the hypothesis that increasing capacity changes the loss landscape, making it easier to optimize. A synthetic experiment is conducted, involving fine-tuning on Gaussian distributions, to analyze how the model output evolves during the process and assess the existence of forgetting. We find that larger networks, in our synthetic setup, tend to see an increase in forgetting. We also evaluate strategies to mitigate forgetting, such as data replay. Finally, we experimentally isolate instances of forgetting in LLMs.
 </div>
 </div>
 
 <div id="student14" class="container">
   <div class="highlight">
-    <div class="title">Learning Useful Representations for Music Information Retrieval with MusicGen</div>
+    <div class="title">Codified audio language representations for Music Information Retrieval
+</div>
     <p></p>
-    <p><span class="subtitle">Jaehee Kim</span> (Advisor: Chris Donahue)</p>
-    <b>Abstract:</b> This research proposes a novel approach that employs the advanced representations of
-MusicGen within the structure of the Jukebox model. By conducting a systematic reproduction
-of the original Jukebox experiments, this project aims to assess the potential enhancements
-MusicGen’s representations bring to the complexity and quality of generated musical
-compositions. To integrate MusicGen’s representations, the model’s parameters will be adjusted
-to accommodate the new inputs. An analysis of MusicGen’s output representations will be
-conducted to understand their structure, dimensions, and how they encapsulate musical
-information differently from Jukebox. Then, the input layers of the Jukebox model will be
-adjusted to ensure compatibility with MusicGen’s data format, which will include steps of data
-preprocessing, input layer adaption (changing the size of the input layer to accommodate
-different token sizes or types of musical information (e.g., embedding dimensions for notes,
-rhythms)), feature normalization, and embedding integration. The core of the research will
-involve a comparative analysis between the outputs of the original Jukebox model and the
-modified version utilizing MusicGen. Success will be measured through a combination of
-quantitative metrics and qualitative assessments. Such measures include BLEU scores (for
-lyrical consistency), Melody Similarity Metrics (for tune comparability), custom metrics for
-harmony and rhythm alignment, and human listeners. Furthermore, computational efficiency,
-including training time and resource utilization, will be evaluated.
+    <p><span class="subtitle">Jaehee Kim and Advika Jayanti</span> (Advisor: Chris Donahue)</p>
+    <b>Abstract:</b> For this project we aim to replicate and expand upon the Music Information Retrieval (MIR) capabilities demonstrated by Jukebox, a state-of-the-art music generation model, utilizing MusicGen as a more computationally efficient alternative. Drawing inspiration from recent advancements in Natural Language Processing (NLP), we propose a novel approach that treats music as a sequence of tokens, enabling the application of NLP methods to extract musically relevant information from audio recordings. Our methodology involves pre-training MusicGen on a diverse dataset of audio recordings paired with labels, followed by fine-tuning the model for specific MIR tasks. We provide a comprehensive evaluation of MusicGen's performance on benchmark MIR tasks, including beat and chord detection, source separation, and genre classification, comparing its efficacy against Jukebox. Additionally, we explore the potential for transfer learning by leveraging MusicGen's learned representations for downstream MIR tasks, such as predicting the melodic structure and ragas in Indian classical music. By leveraging MusicGen's simplicity, we aim to provide access for better applications in music analysis and synthesis.
 </div>
 </div>
 
 <div id="student15" class="container">
   <div class="highlight">
-    <div class="title">Cyber Security and Social Sciences: How do Social Factors Affect Cyber Security?</div>
+    <div class="title">Exploring Youth Empowerment in Fair AI</div>
     <p></p>
     <p><span class="subtitle">Emily Estrada</span> (Advisor: Hanan Hibshi)</p>
-    <b>Abstract:</b> For my research project, I will be adding to the existing PicoCTF educational website. The goal
-for now is to come up with an idea that can be implemented in order to add to the range of
-cybersecurity topics being covered by PicoCTF. The goal of picoCTF is to encourage middle
-and high school students to learn about cybersecurity through fun puzzles. The puzzles are built
-using a “ramp” style where the exercises begin by teaching some basic foundation about a topic
-in cybersecurity, and then increasingly get more difficult. This style of learning allows students to
-build upon their foundation and eventually master the topic they are learning about. The different
-areas are web exploits, forensics, cryptography, reverse engineering, and general skills which
-test foundational computer science skills, such as binary exploits. For now, I am looking for a
-new area of cybersecurity to add to picoCTF, perhaps by building extra exercises in that topic or
-through another way that will effectively help students learn about cybersecurity.
+    <b>Abstract:</b> Due to the innovation in AI-driven technologies, youth have become key stakeholders in algorithmic systems. Youth, especially those from underserved communities, are regular users of AI and are exposed to harm from AI. Despite
+this, youth are not yet included as contributors to creating responsible AI, even
+though they can be sensitive to and articulate AI bias. This research project explores youth empowerment in fair AI in two ways. First, we investigate and share findings about how youth envision their role in changing AI to be more
+fair through a series of educational workshops. Second, this work yields insight
+into how child-ideated features can support youth in giving feedback about algorithms through low-fidelity prototyping.
 </div>
 </div>
 
@@ -511,62 +481,40 @@ music composition tools.
     <div class="title">Proving Validity of CSL With Relaxed Memory Models</div>
     <p></p>
     <p><span class="subtitle">Aaron Gostein</span> (Advisor: Stephen Brookes)</p>
-    <b>Abstract:</b> Concurrent Separation Logic (CSL) is a logic system originally invented by Peter O'Hearn and
-Stephen Brookes that extends Separation Logic, which reasons about programs that manipulate
-data on both a store and a heap, to concurrent programming. Originally in 2007, CSL was proved
-valid by O'Hearn and Brookes using execution traces (step-by-step logs of the actions of a
-program). An implicit assumption in this proof is sequential consistency (SC) of the computer's
-memory model, meaning there is a total order on all reads and writes of a program. However this
-assumption is not necessarily guaranteed on modern computer architectures, many of which offer
-more relaxed guarantees about memory management such as Total Store Order (TSO), meaning
-there is a total order on all writes of a program, and Partial Store Order (PSO), meaning for each
-variable there is a total order an all writes to that variable. In this project we **hope to** show an
-alternative proof of the validity of CSL using DAGs representing order relationships between
-memory actions, which demonstrates that CSL is still valid under these weaker memory
-guarantees.
+    <b>Abstract:</b> We provide a semantics for concurrent separation logic (CSL) that is capable of reasoning about
+parallel and sequential composition of concurrent programs, parameterized by a choice of
+memory model characterized by a relaxation relation and a linearity guarantee. We explore
+memory models such as sequential consistency (SC), which is the memory model assumed in the
+original proof of validity of CSL in 2007, where each pair of memory actions appears in program
+order, total store order (TSO) where each pair of writes to variables appears in program order,
+and partial store order (PSO) where for each variable, each pair of writes to that variable appears
+in program order. Since our semantic definitions are parametrized on the memory model used,
+we obtain a framework in which it is easy to compare programs across a range of memory
+models.
 </div>
 </div>
 
 <div id="student18" class="container">
   <div class="highlight">
-    <div class="title">Range Search with Parallel ANN</div>
+    <div class="title">Investigation on Sim search data set via ParlayANN library</div>
     <p></p>
     <p><span class="subtitle">Taekseung Kim</span> (Advisors: Guy Blelloch, Magdalen Dobson)</p>
-    <b>Abstract:</b> I will be working on Parallel ANN used on range search. Parallel ANN is a parallel
-algorithm that is used for finding k nearest neighbor problem, in parallel context. It is used
-for both high dimensional data, and also low dimensional data. Originally range search
-was going to be added in the library, but current dataset does not fit the theoretical results.
-There are some hypotheses for this problem. First, the dataset itself has some clique, or
-very clustered point so that we cannot form the graph correctly. Second, we are not even
-sure about how the dataset should be fixed. Our goal is to try contraction on some dense
-points and find out if that approach works, and then try to update the range search code
-on graph based algorithm so that the graph range search performs better than bucket
-based algorithm.
+    <b>Abstract:</b> There is a previous presentation about ParlayANN, which is the known fastest
+nearest neighbor and range search algorithm, which is parallel and graph based.
+However, on specific dataset called simsearchnet, this works slower than the known IVF
+algorithm FAISS. Our group investigates the dataset in several way, and comes up with
+new version of ParlayANN that works better on simsearchnet too. 
 </div>
 </div>
 
-<div id="student19" class="container">
+<!-- <div id="student19" class="container">
   <div class="highlight">
-    <div class="title">Broadaning Music Generation Models to Indian Classical Music</div>
+    <div class="title">Codified audio language representations for Music Information Retrieval</div>
     <p></p>
     <p><span class="subtitle">Advika Jayanti</span> (Advisor: Chris Donahue)</p>
-    <b>Abstract:</b> For this project we aim to replicate and expand upon the Music Information Retrieval
-(MIR) capabilities demonstrated by Jukebox, a state-of-the-art music generation model,
-utilizing MusicGen as a more computationally efficient alternative. Drawing inspiration
-from recent advancements in Natural Language Processing (NLP), we propose a novel
-approach that treats music as a sequence of tokens, enabling the application of NLP
-methods to extract musically relevant information from audio recordings. Our
-methodology involves pre-training MusicGen on a diverse dataset of audio recordings
-paired with labels, followed by fine-tuning the model for specific MIR tasks. We provide
-a comprehensive evaluation of MusicGen's performance on benchmark MIR tasks,
-including beat and chord detection, source separation, and genre classification,
-comparing its efficacy against Jukebox. Additionally, we explore the potential for transfer
-learning by leveraging MusicGen's learned representations for downstream MIR tasks,
-such as predicting the melodic structure and ragas in Indian classical music. By
-leveraging MusicGen's simplicity, we aim to provide access for better applications in
-music analysis and synthesis.
+    <b>Abstract:</b> For this project we aim to replicate and expand upon the Music Information Retrieval (MIR) capabilities demonstrated by Jukebox, a state-of-the-art music generation model, utilizing MusicGen as a more computationally efficient alternative. Drawing inspiration from recent advancements in Natural Language Processing (NLP), we propose a novel approach that treats music as a sequence of tokens, enabling the application of NLP methods to extract musically relevant information from audio recordings. Our methodology involves pre-training MusicGen on a diverse dataset of audio recordings paired with labels, followed by fine-tuning the model for specific MIR tasks. We provide a comprehensive evaluation of MusicGen's performance on benchmark MIR tasks, including beat and chord detection, source separation, and genre classification, comparing its efficacy against Jukebox. Additionally, we explore the potential for transfer learning by leveraging MusicGen's learned representations for downstream MIR tasks, such as predicting the melodic structure and ragas in Indian classical music. By leveraging MusicGen's simplicity, we aim to provide access for better applications in music analysis and synthesis.
 </div>
-</div>
+</div> -->
 
 
 
