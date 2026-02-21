@@ -19,6 +19,32 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   </head>
   <body class=container style="padding-top: 50px;">
 
+  <style>
+     .container {
+    margin: 20px;
+  }
+  .highlight {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-left: 5px solid #B01C33;
+    margin-bottom: 20px;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .subtitle {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .abstract {
+    text-indent: 20px;
+  }
+
+  #studentDropdown {
+    font-size: 18px;
+  }
+</style>
 
 
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: darkred;">
@@ -51,7 +77,249 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     </div>
 
 
-<p>A brief description of each student's project will be available soon.</p>
+<p>A brief description of each student's project is available below. The corresponding poster will be available here later in the semester.
+</p>
+
+<h2>Select a student:</h2>
+<select id="studentDropdown">
+  <option value="1">Sophia Judicke</option>
+  <option value="2">Olina Mukherjee & Sophia Sandholm</option>
+  <option value="3">James Tcheng</option>
+  <option value="4">Tony Dong</option>
+  <option value="5">Liam Schilling</option>
+  <option value="6">Elizabeth Terveen</option>
+  <option value="7">Guillaume Atencia</option>
+  <option value="8">Viraj Shah</option>
+</select>
+
+<script>
+  document.getElementById("studentDropdown").addEventListener("change", function() {
+    var selectedValue = this.value;
+    if (selectedValue === "1") {
+      document.getElementById("student1").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "2") {
+      document.getElementById("student2").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "3") {
+      document.getElementById("student3").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "4") {
+      document.getElementById("student4").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "5") {
+      document.getElementById("student5").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "6") {
+      document.getElementById("student6").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "7") {
+      document.getElementById("student7").scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === "8") {
+      document.getElementById("student8").scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+<div id="student1" class="container">
+  <div class="highlight">
+    <div class="title">QVortex: A Quantized, Flexible, and Efficient Sparse Attention</a></div>
+    <p></p>
+    <p><span class="subtitle">Sophia Judicke</span> (Advisors: Zhihao Jia, Zhuoming Chen)</p>
+    <b>Abstract:</b> Currently within large language model (LLM) development, a major challenge is the
+computational requirements to serve inference. To support this, different methods of
+attention calculation and storage have been explored, such as sparse attention.
+Unfortunately, to develop more precise sparse attention algorithms, LLM developers are
+forced to re-implement calculations, KV cache modifications, and CUDA kernels from
+scratch. Fortunately, QVortex explores the creation of a sparse attention algorithm
+generator to enable rapid attention algorithm development. My role includes
+accelerating our attention algorithm by providing quantized capabilities for INT8 and
+FP8 precision. This will include an implementation of quantization for KV cache storage,
+the creation of updated CUDA kernels which are compatible with INT8 and FP8
+datatypes, and a compiler to auto-generate different custom kernels for various sparse
+attention algorithms with different capabilities and requirements. The performance of
+this project will be evaluated by LongBench and compared to the BFLOAT16 framework
+to ensure limited accuracy loss and decreased latency. That being said, the
+performance of the quantized sparse attention algorithms themselves do not reflect the
+true impact of this project. Ultimately, QVortex will allow for rapid attention algorithm
+development to enable accurate, lightweight models which will be able to replace
+current larger, high-cost models.
+</div>
+</div>
+
+<div id="student2" class="container">
+  <div class="highlight">
+    <div class="title">Guided RL distillation with chunked generation for CoT Improvement in Small Language Models</a></div>
+    <p></p>
+    <p><span class="subtitle">Olina Mukherjee, Sophia Sandholm</span> (Advisors: Aditi Raghunathan, Christina Baek)</p>
+    <b>Abstract:</b> Small language models can learn complex reasoning when post-trained on expert reasoning
+traces using reinforcement learning (RL) and knowledge distillation. However, rather than
+learning overarching reasoning strategies, they often memorize traces, which can harm
+generalization. This failure mode is hypothesized to stem from small models’ inability to
+internally represent intermediate reasoning steps that are omitted in expert traces. To address
+this, we propose a new RL with distillation algorithm in which expert traces are broken into steps
+and small models generate intermediate steps between consecutive expert steps. For each step
+generated, the small models are rewarded based on their confidence in predicting future expert
+steps. This encourages the models to generate informative and logically consistent steps. The
+expert traces used during RL are reasoning traces written by humans from the GSM8K dataset
+of grade school math problems. After RL, we evaluate the small models on the held-out GSM8K
+test set. Preliminary results suggest that our algorithm helps small models generate
+intermediate steps that reflect overarching reasoning strategies.
+</div>
+</div>
+
+<div id="student3" class="container">
+  <div class="highlight">
+    <div class="title">Attribute-Guided Skill Adaptation in Vision-Language-Action Models</a></div>
+    <p></p>
+    <p><span class="subtitle">James Tcheng</span> (Advisors: Gavin Zhu, Reid Simmons, Jean Oh)</p>
+    <b>Abstract:</b> Vision-Language-Action models (VLAs) offer a promising pathway toward
+general-purpose embodied agents. However, current approaches typically acquire new
+skills through extensive task-specific fine-tuning. To improve upon this, we draw
+inspiration from how humans use analogies to learn new skills efficiently, adapting
+existing skills by identifying and controlling structured differences between related tasks.
+We investigate how skill representations in VLAs can be decomposed into interpretable,
+steerable attributes that capture meaningful variations in behavior. By manipulating
+these attributes, agents can adapt previously learned skills to new tasks without full
+retraining. We evaluate this approach on tabletop manipulation tasks, measuring task
+success, adaptation speed, and computational cost against standard fine-tuning
+baselines. Our results suggest that attribute-based skill steering can achieve
+comparable performance while requiring significantly less compute and data, pointing
+toward more efficient and reusable skill representations for embodied agents. This
+compositional framework enables a reusable library of modular behavioral primitives,
+allowing agents to synthesize novel behaviors through recombination and bringing
+embodied learning closer to the flexibility and efficiency of human skill acquisition.
+</div>
+</div>
+
+<div id="student4" class="container">
+  <div class="highlight">
+    <div class="title">One-Shot Affordance Transfer through Semantically Anchored Functional Map</a></div>
+    <p></p>
+    <p><span class="subtitle">Tony Dong</span> (Advisors: Jeffrey Ichnowski, Hongyi Chen)</p>
+    <b>Abstract:</b> Learning from demonstration enables robots to acquire skills by observing human interactions,
+but generalizing these skills across object instances remains challenging. While recent
+vision-language models (VLMs) provide strong semantic reasoning for this task, they are
+computationally expensive and operate primarily in the 2D image domain. We propose
+Semantic Anchored Functional Maps, a framework for efficient affordance transfer across
+objects. Our method anchors correspondence at semantically meaningful regions using
+pretrained visual embeddings and propagates these constraints over object surfaces via
+functional maps. This design enables accurate affordance transfer between geometrically
+diverse objects while avoiding the overhead of VLM-based pipelines. Experiments on synthetic
+benchmarks and real-world robotic tasks show that our approach achieves affordance transfer
+accuracy comparable to multi-view VLM methods while operating at significantly lower
+computational cost.
+</div>
+</div>
+
+<div id="student5" class="container">
+  <div class="highlight">
+    <div class="title">Learning Compositions of Subsequential Functions for Proto-language Reconstruction</a></div>
+    <p></p>
+    <p><span class="subtitle">William (Liam) Schilling</span> (Advisors: David R. Mortensen)</p>
+    <b>Abstract:</b> Reconstructing proto-languages from observed data on their modern descendants is a
+principal objective of historical linguistics. As such, there has long been interest in
+mechanizing linguistic reconstruction. Recent work applies neural methods, learning
+reconstructions modeled as trees of composed string functions that map forms in a root
+proto-language to forms in daughter languages at the leaves. Though powerful, current
+neural solutions are limited in that their hypothesized maps do not reveal the constituent
+linguistic processes, making them difficult for linguists to interpret. Alternatively,
+finite-state representations are more interpretable, and their learnability properties are
+well-studied with strong theoretical guarantees. However, there is little work on the case
+of learning compositions of functions, the heart of linguistic reconstruction.
+
+<p></p>
+We will study the reconstruction problem from the perspective of learning compositions
+of finite-state functions. First, we will expand the empirical coverage of prior learners by
+considering structured classes of subsequential functions, which have become standard
+in finite-state learning. Then, we will study the types of compositions in reconstruction
+scenarios, modeled as compositions of functions that are both subsequential. Finally,
+we will study the branching compositions in reconstruction scenarios, modeled as
+multiple compositions with a common first function. A learner for these scenarios would
+apply to reconstruction tasks, potentially working together with neural solutions for
+reliable automation with strong theoretical foundations.
+</div>
+</div>
+
+<div id="student6" class="container">
+  <div class="highlight">
+    <div class="title">Learning Compositions of Subsequential Functions for Proto-language Reconstruction</a></div>
+    <p></p>
+    <p><span class="subtitle">Elizabeth Terveen</span> (Advisors: Tal Daniel, David Held)</p>
+    <b>Abstract:</b> Designing an embodied generalist agent that can autonomously complete a diverse set
+of complex tasks is a long standing challenge. A dominant paradigm for training
+generalist agents is Model-Based Reinforcement Learning (MBRL), where traditional
+reinforcement learning algorithms are trained on top of a World Model. MBRL is
+commonly implemented with Vision Language Action (VLA) or a diffusion transformer
+(DTs) networks. DTs and VLAs work well when trained on large datasets, but struggle to
+capture fine-grained object interactions and decision making is opaque. Recent work
+demonstrates the power of object-centric particle based representations to address
+challenges in capturing fine-grained interactions and interpretability. Concurrently,
+recent results show that co-training video and action generation modules improves
+generation quality by ensuring mutually consistent latent representations. Extending
+work by Daniel and Tamar, we implement a latent particle world model that jointly learns
+to generate actions and videos. We assess the task solving capabilities of this network
+in RLBench, a simulated robotic task-solving benchmark featuring a diverse assortment
+of tasks of varying complexity.
+</div>
+</div>
+
+<div id="student7" class="container">
+  <div class="highlight">
+    <div class="title">NL to SAT compilation</a></div>
+    <p></p>
+    <p><span class="subtitle">Guillaume Atencia</span> (Advisors: Ruben Martins)</p>
+    <b>Abstract:</b> This project's main focus is to explore the efficiency of an LLM-driven, solver-backend framework for translating
+natural-language problem descriptions into satisfiable propositional encodings, with the goal of making modern SAT
+technology accessible to non-expert modelers. While contemporary LLMs have the capacity to solve most well known
+tasks (e.g. Sudoku) using direct code generation or solver calls, they degrade on novel or complex reductions to SAT
+where the correct variable semantics, constraint structure or scalable CNF are much harder to reliably synthesize. Our
+approach addresses this bottleneck by enforcing NL → SAT modeling as an explicit multi-stage pipeline resembling that of
+a human solver’s reasoning: (i) We start by inferring a set of boolean variables with clear semantics, (ii) we then enumerate
+required constraint families, (iii) we then encode each constraint against the variable schema using trusted libraries, and
+(iv) finally solve and decode assignments back to the original domain for results to be interpretable in NL. To increase the
+correctness, our main approaches include finding the best intermediate representations that can bridge the NL to SAT like
+PySAT’s established CNF encoders for cardinality, pseudo-Boolean structure, or MiniZinc to find more complex constraint
+building and reducing reliance on brittle, hand-written clause generation. We also introduce constraint-level validation via
+fuzzing: the system generates small instances that should satisfy or violate a candidate constraint and checks
+satisfiable/unsatisfiable outcomes to detect missing, inconsistent, or overly weak clauses early. We outline an evaluation
+plan comparing our method to direct LLM prompting baselines across a suite of benchmark problems, with emphasis on
+harder, non-templateable instances.
+</div>
+</div>
+
+<div id="student8" class="container">
+  <div class="highlight">
+    <div class="title">Biologically Inspired RL for Multi-Action Decision Making in <i>Drosophila</i></a></div>
+    <p></p>
+    <p><span class="subtitle">Viraj Shah</span> (Advisors: Aran Nayebi)</p>
+    <b>Abstract:</b> This project focuses on developing machine learning models for action selection inspired by
+the neural circuitry of Drosophila melanogaster. The goal is to design RL agents that learn
+multi-action policies under sparse rewards and partial observability, while incorporating inductive
+biases motivated by biological systems. Rather than explicitly modeling low-level neural dynamics, the
+project emphasizes discovering computational principles underlying biological behavior through a
+more algorithmic approach where we will explore parallel action pathways and intrinsic motivation
+mechanisms that reflect constraints observed in real-world agents.
+
+<p></p>
+The work explores reinforcement learning formulations that move beyond standard
+single-action policies and address the long-standing challenge of hierarchical and structured action
+selection. The project proceeds in two major stages. First, biologically grounded action representations
+are constructed by mapping model actions as closely as possible to real fly behaviors. To do this we use
+the kinematic and behavioral datasets collected by the Turaga Lab. These representations serve as the
+action space for learning agents, which are evaluated in controlled environments for exploration
+efficiency, policy stability, and generalization. In the second stage, the focus shifts to analyzing how
+architectural choices and learning rules influence sample efficiency and robustness, with the aim of
+developing richer intrinsic reward signals that capture internal behavioral objectives rather than relying
+solely on externally defined rewards.
+
+<p></p>
+Overall, this project aligns with the lab’s goal of grounding reinforcement learning design in
+biological inspiration while maintaining a rigorous machine learning evaluation framework. The
+results aim to identify principles for building lightweight, interpretable, and data-efficient agents where
+the hope is that the results may inform both biologically inspired machine learning and the
+development of scalable reinforcement learning algorithms for complex decision-making tasks.
+</div>
+</div>
+
   <br>
   </body>
 </html>
